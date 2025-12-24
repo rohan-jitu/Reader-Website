@@ -65,6 +65,7 @@ body{
     background-color: var(--btn-text-color);
     position: sticky;
     top: 0px;
+    z-index: 10;
 
         
     .nav-div{
@@ -375,6 +376,393 @@ body{
     }
 }
 
+
+/* FACTS SECTION */
+
+.facts-section{
+
+    .facts-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        justify-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: .5rem 1rem 2rem 1rem;
+
+        .facts-card{
+            padding: 2rem 1.5rem;
+            text-align: center;   
+
+            &:hover {
+                transform: translateY(-6px);
+            }
+
+            .facts-title{
+                font-size: 48px;
+                color: var(--secondary-btn-color);
+                margin-bottom: 12px;
+            }
+            .facts-description{
+                font-size: 18px;
+                letter-spacing: 0.5px;
+                line-height: 28px;
+                color: var(--secondary-text-color);
+            }
+        }
+    }
+}
+
+
+/* REVIEW SECTION */
+
+
+.review-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .review-card {
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 1.75rem;
+        flex: 1 1 280px;
+        min-height: 30px;
+        max-width: 320px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .ratings {
+            display: flex;
+            gap: 0.25rem;
+            color: #fbbf24;  /*// star color */
+            font-size: 1rem;
+        }
+
+        .review-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+            flex-grow: 1;
+        }
+
+        .buyer-data {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+
+            .buyer-photo {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+
+                .buyer-name {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
+
+                .buyer-title {
+                    font-size: 0.85rem;
+                    color: #777;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.review-section{
+    text-align: center;
+    .more-reviews{
+        margin: 0px auto;
+        text-align: center;
+
+        a{
+            border-bottom: 1px solid var(--secondary-btn-color);
+            text-decoration: none;
+
+            &:hover{
+                transform: translateY(-10px);
+                color: var(--section-bg-color);
+                border: none;
+            }
+        }
+    }
+}
+
+
+/* ABOUT SECTION */
+.about{
+    /* max-width: 1440px;
+    margin: 64px auto;
+    padding: 28px 0; */
+
+    .about-container{
+        display: flex;
+        /* align-items: flex-start; */
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2rem;
+        max-width:1200px;
+        margin: 28px auto 0 auto;
+        padding: 2rem;
+
+        img {
+            width: 40%
+            height : auto;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .about-content {
+            flex: 1;
+
+            .author-name {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+                color: #111;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.7;
+                color: #444;
+
+            a {
+                color: #0066ff;
+                text-decoration: none;
+                font-weight: 500;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    } 
+}
+
+
+/* PRICING SECTION */
+
+.pricing-section{
+    background-color: var(--section-bg-color);
+
+    .heading-container{
+
+        .section-title{
+            color: var(--btn-text-color);
+        }
+        .title-description{
+            color: var(--foreground-color);
+        }
+    }
+
+    .pricing-container{
+        max-width: 1200px;
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1rem;
+        row-gap: 1.5rem;
+
+        .pricing-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            border-radius: 6px;
+            padding: 1rem;
+            background-color: var(--bg-color);
+            gap: 1rem;
+            flex: 1 1 280px;
+            max-width: 300px;
+
+            .offer{
+                font-size: 16px;
+                color: var(--secondary-btn-color);
+                letter-spacing: 1px;
+            }
+            .price-card-title{
+                font-size: 44px;
+            }
+            .price-card-description{
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: .5px;
+            }
+            .price-card-feature{
+                font-size: 16px;
+                letter-spacing: .5px;
+                color: var(--secondary-text-color);
+            }
+            .btn-container{
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                .card-btn{
+                    padding: 12px;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    color: var(--btn-text-color);
+                    border: none;
+                    box-shadow: 0px 0px 2px var(--secondary-text-color);
+                    cursor: pointer;
+                }
+                .btn-amazon{
+                    background-color: var(--btn-color);
+                    &:hover{
+                        background-color: var(--secondary-btn-color);
+                        transform: translateY(-2px);
+                        box-shadow: 0px 0px 4px var(--secondary-text-color);
+                    }
+                }
+                .btn-mail{
+                    text-align: center;
+                    background-color: var(--foreground-color);
+                    color: var(--secondary-text-color);
+                    border: 1px solid var(--secondary-text-color);
+                    box-shadow: 0px 0px 1px var(--secondary-text-color);
+
+                    &:hover{
+                        transform: translateY(-2px);
+                        box-shadow: 0px 0px 2px var(--secondary-text-color);
+                    }
+                }
+                .btn-free{
+                    background-color: var(--secondary-btn-color);
+                    &:hover{
+                        background-color: var(--btn-color);
+                        transform: translateY(-2px);
+                        box-shadow: 0px 0px 4px var(--secondary-text-color);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .faq{
+        /* background-color: aqua; */
+        margin: 32px auto 0 auto;
+        max-width: 1120px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 2rem;
+
+        .faq-card{
+            /* background-color: #fbbf24; */
+            display: flex;
+            gap: 10px;
+
+            .faq-icon{
+                background-color: white;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                margin-top: 3px;
+                i{
+                    font-size: 22px;
+                    align-self: center;
+                    color: var(--secondary-btn-color);
+                }
+            }
+
+            .faq-body{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .faq-title{
+                    font-size: 22px;
+                    color: var(--bg-color);
+                }
+                .faq-ans{
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: var(--foreground-color);
+                    g
+                }
+            }
+        }
+    }
+}
+
+
+/* FOOTER SECTION  */
+
+footer{
+    max-width: 1400px;
+    margin: 40px auto 28px auto;
+    padding: 20px 40px;
+
+    .footer-cta{
+        margin-bottom: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .left{
+            width: 75%;
+            h3{
+                font-size: 44px;
+            }
+            p{
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                color: var(--secondary-text-color);
+            }
+        }
+        .right{
+            a{
+                text-decoration: none;
+                color: var(--btn-text-color);
+                background-color: var(--btn-color);
+                padding: 1rem 2.5rem;
+                border-radius: 4px;
+                box-shadow: 0px 0px 2px var(--foreground-color);
+
+                &:hover{
+                    background-color: var(--secondary-btn-color);
+                    box-shadow: 0px 0px 4px var(--foreground-color);
+                    transform: translateY(-4px);
+                }
+            }
+        }
+    }
+}
 @media screen and (width<1025px) {
     
     .sec-space{
@@ -448,6 +836,12 @@ body{
 
      
 
+    /* FACTS SECTION */
+
+    /* REVIEW SECTION */
+
+
+    /* PRICING SECTION */
 }
 
 
@@ -662,6 +1056,83 @@ body{
                 width: 100%;
                 margin: 8px;
                 font-size: 14px;
+            }
+        }
+    }
+
+
+    /* FACTS SECTION */
+
+
+    .facts-section{
+        .facts-container{
+            gap: .5rem;
+            .facts-card{
+                padding: 1rem 1.5rem;
+                .facts-title{
+                    font-size: 36px;
+                }
+                .facts-description{
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+
+    /* REVIEW SECTION */
+
+    /* ABOUT SECTION */
+
+    .about{
+
+        .about-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+            margin: 20px auto 0 auto;
+            padding: 1rem;
+
+            img{
+                width: 200px;
+            }
+            .about-content{
+                .author-name{
+                    font-size: 22px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+
+    /* PRICING SECTION */
+
+    .pricing-section{
+        .faq{
+            grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+            .faq-card{
+                .faq-icon{
+                    height: 19px;
+                    width: 20px;
+                    margin-top: 3px;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+                .faq-body{
+                    .faq-title{
+                        font-size: 20px;
+                    }
+                    .faq-ans{
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                }
             }
         }
     }
@@ -892,6 +1363,100 @@ body{
                 padding: 10px 28vw;
                 margin: 8px;
                 font-size: 12px;
+            }
+        }
+    }
+
+
+    /* FACTS SECTION */
+
+    .facts-section{
+        .facts-container{
+            gap: .5rem;
+            .facts-card{
+                padding: 1rem 1.5rem;
+                .facts-title{
+                    font-size: 28px;
+                }
+                .facts-description{
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+
+    /* REVIEW SECTION */
+
+
+    /* ABOUT SECTION */
+
+    .about{
+
+        .about-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+            padding: .5rem;
+
+            .about-content {
+                .author-name{
+                    font-size: 1.25rem;
+                }
+                p{
+                    font-size: 13px;
+                    text-align:justify;
+                }
+            }
+        }
+    }
+
+
+    /* PRICING SECTION */
+
+    .pricing-section{
+        .pricing-container{
+            .pricing-card{
+                .offer{
+                    font-size: 14px;
+                }
+                .price-card-title{
+                    font-size: 40px;
+                }
+                .price-card-feature{
+                    font-size: 14px;
+                }
+                .price-card-description{
+                    font-size: 16px;
+                }
+                .btn-container{
+                    .card-btn{
+                        font-size: 14px;
+                    }
+
+                }
+            }
+        }
+        .faq{
+            .faq-card{
+                .faq-icon{
+                    height: 16px;
+                    width: 16px;
+                    margin-top: 3px;
+                    i{
+                        font-size: 18px;
+                    }
+                }
+                .faq-body{
+                    .faq-title{
+                        font-size: 18px;
+                    }
+                    .faq-ans{
+                        font-size: 13px;
+                        line-height: 18px;
+                    }
+                }
             }
         }
     }
